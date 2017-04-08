@@ -27,7 +27,7 @@ function addButtons() {
 $(window).scroll(collapseNavbar);
 $(document).ready(function () {
         collapseNavbar();
-        $("#streetview").tinyscrollbar({ axis: "y" });
+        $(".nano").nanoScroller();
 
 });
 

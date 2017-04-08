@@ -240,13 +240,13 @@ a:focus {
 }
 
 #class-list {
-  overflow-y: auto;
   height: 500px;
+  margin-left: -39px;
 }
 
 #classes {
   /*width: 60%;*/
-  height: 200px;
+  /*height: 200px;*/
   /*margin-top: 100px;*/
   /*margin-left: 18%;*/
 }
