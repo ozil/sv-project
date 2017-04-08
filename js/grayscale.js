@@ -14,22 +14,22 @@ function collapseNavbar() {
 }
 
 function addButtons() {
-    var classList = $('#class-list');
-    var classListLength = classList.length;
-    classList.each(function () {
+    var classBtns = $('.classBtn');
+    classBtns.each(function () {
+        var button = $(this);
+        button.onclick();
 
     })
-
-
-
 }
 
 $(window).scroll(collapseNavbar);
 $(document).ready(function () {
         collapseNavbar();
-        $(".nano").nanoScroller();
-
+        $(".nano").nanoScroller({preventPageScrolling: true});
+        addButtons();
 });
+
+
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
