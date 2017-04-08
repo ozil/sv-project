@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/tinyscrollbar.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -32,7 +32,6 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -53,10 +52,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Mapa</a>
+                        <a class="page-scroll" href="#map-section">Mapa</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Budynki</a>
+                        <a class="page-scroll" href="#buildings">Budynki</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Sale</a>
@@ -74,8 +73,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Witam w wirtualnym przewodniku po UE Katowice</h1>                        
-                        <a href="#about" class="btn btn-circle page-scroll">
+                        <h1 class="brand-heading">Wirtualny przewodnik po kampusie UE w Katowicach</h1>
+                        <a href="#map-section" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
@@ -95,18 +94,63 @@
             </div>
         </div>
     </section>-->
-	<div id="map-streetview"></div>
-	<div id="map">	</div>
+	<section id="map-section" class="container-fluid content-section text-center">
+		<div id="container" class="container-fluid">
+            <div id="streetview" class="row">
+                <div id = "classes" class ="col-md-3">
+                    <h1>Sale</h1>
+                    <div id="scrollbar"></div>
+                        <div id="viewport">
+                            <ul id="class-list">
+                                <h1 class="h1" href="#map-section">231a</h1>
+                                <h1 class="h1" href="#map-section">232a</h1>
+                                <h1 class="h1" href="#map-section">233a</h1>
+                                <h1 class="h1" href="#map-section">234a</h1>
+                                <h1 class="h1" href="#map-section">235a</h1>
+                                <h1 class="h1" href="#map-section">236a</h1>
+                                <h1 class="h1" href="#map-section">237a</h1>
+                                <h1 class="h1" href="#map-section">238a</h1>
+                                <h1 class="h1" href="#map-section">231a</h1>
+                                <h1 class="h1" href="#map-section">232a</h1>
+                                <h1 class="h1" href="#map-section">233a</h1>
+                                <h1 class="h1" href="#map-section">234a</h1>
+                                <h1 class="h1" href="#map-section">235a</h1>
+                                <h1 class="h1" href="#map-section">236a</h1>
+                                <h1 class="h1" href="#map-section">237a</h1>
+                                <h1 class="h1" href="#map-section">238a</h1>
+                            </ul>
+                        </div>
+                    </div>
+                <div id="map-streetview" class="col-md-6">
+
+
+                </div>
+                <div id="building" class="col-md-3">
+                <h1>Budynki</h1>
+                    <ul id="building-list">
+                        <h1 class="h1" href="#map-section">Budynek A</h1>
+                        <h1 class="h1" href="#map-section">Budynek B</h1>
+                        <h1 class="h1" href="#map-section">Budynek C</h1>
+                        <h1 class="h1" href="#map-section">Budynek D</h1>
+                        <h1 class="h1" href="#map-section">Budynek E</h1>
+                        <h1 class="h1" href="#map-section">Budynek F</h1>
+                        <h1 class="h1" href="#map-section">Budynek N</h1>
+                        <h1 class="h1" href="#map-section">Budynek P</h1>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+		<div id="map"></div>
+	</section>
 	
 	
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
+    <section id="buildings" class="content-section text-center">
+        <div class="building-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
                 </div>
             </div>
         </div>
@@ -116,32 +160,17 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
     <!--<div id="map"></div>
-
+	
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2016</p>
+            <p>Copyright &copy; Mateusz Orzeł 2016</p>
         </div>
     </footer>
 
@@ -159,10 +188,11 @@
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script src="js/events.js"></script>
 	<script src="js/streetview.js"></script>
-	<script src="js — kopia/panoramaSwitcher.js"></script>
-	<script src="js — kopia/customLinks.js"></script>
+    <script src="js/jquery.tinyscrollbar.js"></script>
+	<script src="js/panoramaSwitcher.js"></script>
+	<script src="js/customLinks.js"></script>
 
 </body>
-
 </html>

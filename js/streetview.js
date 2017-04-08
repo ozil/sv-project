@@ -25,33 +25,33 @@
     var panoSearchRadius = 50;
  
     // Create a StreetViewService object.
-    var client = new google.maps.StreetViewService();	
+    var client = new google.maps.StreetViewService();
 	
   }
- 
- 
- google.maps.event.addDomListener(window, 'load', initialize);
+  
+  google.maps.event.addDomListener(window, 'load', initialize);
 	// google.maps.event.addDomListener(window, 'resize', function() {
     // map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
 	// });
-	
+
+
 	
   function startApplication() {
  
  
-   var mapCenter = new google.maps.LatLng(48.85893528,2.2933412);
+
    // options for the map
-   var mapOptions1 = {
+   var mapOverview = {
       center: budynekA,
-      zoom: 17,
       mapTypeId: 'satellite',
+      zoom: 20,
       streetViewControl: false,
-	  heading: 240,
+	  heading: 90,
 	  tilt: 45,
    };
    // create a new map object to be shown in the map_canvas1 div elements and with the options that were set
-   map = new google.maps.Map(document.getElementById("map"), mapOptions1);
- 
+   map = new google.maps.Map(document.getElementById("map"), mapOverview);
+
  
     // Set up the map and enable the Street View control.
     var mapOptions = {
@@ -165,14 +165,13 @@
 	markerRock.setIcon(image);
 	markerpodworko.setIcon(image);
 	markerCrossWalk.setIcon(image);
-	marker.setIcon(blueImage);  
+	marker.setIcon(blueImage);
+	
+  
   }
  
   // Return a pano image given the panoID.
   function getCustomPanoramaTileUrl(pano,zoom,tileX,tileY) {
-    //return 'photo.jpg';
 	return "images/" +pano + '.jpg';
-    //return 'images/panoReception1024-' + zoom + '-' + tileX + '-' +tileY + '.jpg';
-  }  
-
-  
+  }
+ 

@@ -13,8 +13,23 @@ function collapseNavbar() {
     }
 }
 
+function addButtons() {
+    var classList = $('#class-list');
+    var classListLength = classList.length;
+    classList.each(function () {
+
+    })
+
+
+
+}
+
 $(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);
+$(document).ready(function () {
+        collapseNavbar();
+        $("#streetview").tinyscrollbar({ axis: "y" });
+
+});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -31,6 +46,7 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');
 });
+
 
 // Google Mapss Scripts
 // var map = null;
