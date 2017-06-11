@@ -1,7 +1,7 @@
 var map;
 var panorama;
 var mapElement;
-var classes = [231, 232, 233, 234, 201, 202, 203, 204, 205, 206, 207, 208, 209];
+// var classes = [231, 232, 233, 234, 201, 202, 203, 204, 205, 206, 207, 208, 209];
 var markers = [];
 
 var markerRock;
@@ -66,12 +66,13 @@ function startApplication() {
     var panoOptions = {
         pano: '6',
         visible: true,
+        zoom: 0,
         enableCloseButton: false,
         panoProvider: getCustomPanorama,
         pov: {
             heading: 280,
             pitch: -10,
-            zoom: -1
+            // zoom: 1
         }
     }
     panorama.setOptions(panoOptions);
@@ -170,7 +171,8 @@ function setBlueIcon(marker) {
 
 // Return a pano image given the panoID.
 function getCustomPanoramaTileUrl(pano, zoom, tileX, tileY) {
-    return "images/" + pano + '.jpg';
+    // return "images/"+pano+"/"+ (tileY + 1) + "_" + (tileX + 1)+ '.jpg';
+    return "images/" + pano + ".jpg";
 }
 
 function createMarkers(classes, map) {
@@ -186,7 +188,10 @@ function createMarkers(classes, map) {
     }
 }
 
-function setMarker() {
+function getClassView(heading, panoId) {
+    // panorama.setPano(panoId);
+    panorama.setPano(panoId)
+    panorama.setPov({heading: heading, pitch: -10, zoom: 0});
 
 }
 

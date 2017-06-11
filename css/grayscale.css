@@ -234,14 +234,24 @@ a:focus {
 
 #building {
   /*width: 60%;*/
-  height: 100%;
+  height: 584px;
   /*margin-top: 100px;*/
   /*margin-left: 18%;*/
+}
+
+
+#building-list {
+  height: 500px;
+  margin-left: -39px;
 }
 
 #class-list {
   height: 500px;
   margin-left: -39px;
+}
+
+a:hover {
+  cursor:pointer;
 }
 
 #classes {
